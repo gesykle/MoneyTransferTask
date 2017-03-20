@@ -1,0 +1,17 @@
+{
+  "name": "money-transfer",
+  "description": "Money transfer task from Paysera",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Tomas Vaskevicius",
+      "email": "tomas.vaskevicius1@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "MoneyTransfer\\Src\\": ["Src\\"]
+    }
+  }
+}
