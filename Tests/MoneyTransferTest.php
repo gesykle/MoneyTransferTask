@@ -1,25 +1,23 @@
 <?php
 
 use MoneyTransfer\Src\MoneyTransfer;
+use PHPUnit\Framework\TestCase;
 
-class MoneyTransferTest extends PHPUnit_Framework_TestCase
+class MoneyTransferTest extends TestCase
 {
-    /**
-     * @expectedException Exception
-     */
     public function testAddLessThanOneMoneyToAccount_ExpectException()
     {
         $transferer = new MoneyTransfer();
+        $this->expectException('Exception');
         $transferer->addMoneyToAccount(0, "EUR");
         $transferer->addMoneyToAccount(-1, "EUR");
+
     }
 
-    /**
-     * @expectedException Exception
-     */
     public function testAddWrongCurrencyMoney_ExpectException()
     {
         $transferer = new MoneyTransfer();
+        $this->expectException('Exception');
         $transferer->addMoneyToAccount(100, "LTL");
     }
 

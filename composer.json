@@ -13,5 +13,8 @@
     "psr-4": {
       "MoneyTransfer\\Src\\": ["Src\\"]
     }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.1"
   }
 }

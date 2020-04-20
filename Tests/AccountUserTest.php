@@ -3,8 +3,9 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 use MoneyTransfer\Src\AccountUser;
+use PHPUnit\Framework\TestCase;
 
-class AccountUserTest extends PHPUnit_Framework_TestCase
+class AccountUserTest extends TestCase
 {
     public function testNaturalUserCashoutAfterFourOperations()
     {

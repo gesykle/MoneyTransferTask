@@ -4,25 +4,26 @@ require __DIR__ . '/vendor/autoload.php';
 
 use MoneyTransfer\Src\AccountUser;
 
-$f = openFile($argv[1]);
+$filePath = isset($argv[1]) ? $argv[1] : __DIR__ . '/Data/input.csv';
+$file = openFile($filePath);
 
-if ($f) {
-    calculateCommissions($f);
-    fclose($f);
+if ($file) {
+    calculateCommissions($file);
+    fclose($file);
 }
 
 function openFile($filename)
 {
     if (!file_exists($filename))
         throw new Exception('File not found.');
-    $f = fopen($filename, 'r');
-    return $f;
+    $file = fopen($filename, 'r');
+    return $file;
 }
 
-function calculateCommissions($f)
+function calculateCommissions($file)
 {
     $account_users = array();
-    while ($line = fgets($f)) {
+    while ($line = fgets($file)) {
         $row_data = explode(',', $line);
         $id = $row_data[1];
         $user_type = $row_data[2];
