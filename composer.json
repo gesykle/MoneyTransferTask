@@ -1,6 +1,6 @@
 {
   "name": "money-transfer",
-  "description": "Money transfer task from Paysera",
+  "description": "Money transfer task",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
